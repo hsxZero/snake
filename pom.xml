@@ -11,6 +11,7 @@
 
     <modules>
         <module>db</module>
+        <module>common</module>
     </modules>
 
 
@@ -31,20 +32,34 @@
             <!-- 数据库连接池 -->
             <dependency>
                 <groupId>com.alibaba</groupId>
-                <artifactId>druid-spring-boot-starter</artifactId>
-                <version>1.1.22</version>
+                <artifactId>druid</artifactId>
+                <version>1.1.21</version>
             </dependency>
-            <!-- sharding -->
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid}</version>
+            </dependency>
+
             <dependency>
                 <groupId>org.apache.shardingsphere</groupId>
-                <artifactId>sharding-jdbc-core</artifactId>
+                <artifactId>sharding-jdbc-spring-boot-starter</artifactId>
                 <version>4.0.0-RC1</version>
             </dependency>
+
+            <dependency>
+                <groupId>org.apache.shardingsphere</groupId>
+                <artifactId>sharding-jdbc-spring-namespace</artifactId>
+                <version>4.0.0-RC1</version>
+            </dependency>
+
+
             <!-- mybatis-plus-boot-starter -->
             <dependency>
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-boot-starter</artifactId>
-                <version>3.0.5</version>
+                <version>3.3.1</version>
             </dependency>
             <!-- lombok -->
             <dependency>
@@ -52,6 +67,49 @@
                 <artifactId>lombok</artifactId>
                 <version>1.18.12</version>
                 <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>2.7.0</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>2.7.0</version>
+            </dependency>
+            <!-- elasticsearch -->
+            <dependency>
+                <groupId>org.elasticsearch</groupId>
+                <artifactId>elasticsearch</artifactId>
+                <version>7.12.1</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.elasticsearch.client</groupId>
+                <artifactId>elasticsearch-rest-high-level-client</artifactId>
+                <version>7.12.1</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-test</artifactId>
+                <version>2.3.7.RELEASE</version>
+                <!--<scope>test</scope>-->
+            </dependency>
+
+            <!-- redisson -->
+<!--            <dependency>-->
+<!--                <groupId>org.redisson</groupId>-->
+<!--                <artifactId>redisson-spring-boot-starter</artifactId>-->
+<!--                <version>3.13.6</version>-->
+<!--            </dependency>-->
+
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson</artifactId>
+                <version>3.14.1</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
